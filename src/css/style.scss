@@ -701,14 +701,14 @@ html {
 .backround {}
 
 .rates {
+	position: relative;
 	margin-top: 9rem;
 
 	&__header {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding-bottom: 8rem;
-		border-bottom: 1px solid $black;
+		padding-bottom: 2rem;
 
 
 	}
@@ -720,6 +720,8 @@ html {
 		line-height: 42px;
 		letter-spacing: 0.05rem;
 		text-transform: uppercase;
+		position: relative;
+		z-index: 1;
 
 	}
 
@@ -732,6 +734,39 @@ html {
 	&__item {
 		margin-top: 6rem;
 	}
+
+	&__circle-140 {
+		width: 140px;
+		height: 140px;
+		border-radius: 100%;
+		background-color: $white;
+		position: absolute;
+		top: -49px;
+		left: 80px;
+		z-index: 0;
+	}
+
+	&__circle-90 {
+		width: 90px;
+		height: 90px;
+		border-radius: 100%;
+		background-color: $white;
+		position: absolute;
+		top: 475px;
+		left: 685px;
+		z-index: 0;
+	}
+
+	&__circle-90-90 {
+		width: 90px;
+		height: 90px;
+		border-radius: 100%;
+		background-color: $white;
+		position: absolute;
+		bottom: -17px;
+		left: 685px;
+		z-index: 0;
+	}
 }
 
 
@@ -739,6 +774,8 @@ html {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 2rem;
+	padding-top: 5.8rem;
+	border-top: 1px solid $black;
 
 	&__left {
 		max-width: 382px;
@@ -754,16 +791,41 @@ html {
 		font-weight: 500;
 		line-height: 24px;
 		margin-bottom: 7.5rem;
+		opacity: .8;
 	}
 
 	&__btn {
+		font-size: 1.6rem;
 		font-weight: 700;
 		line-height: 24px;
+		background-color: transparent;
+		display: flex;
+		align-items: center;
+		gap: 1.7rem;
+		position: relative;
+
+		&::after {
+			content: '';
+			background: url(../images/main/main-arrow.svg)0 0/cover no-repeat;
+			display: block;
+			width: 15px;
+			height: 11px;
+		}
+
+		&:hover::before {
+			content: "";
+			display: block;
+			height: 2px;
+			width: 100%;
+			background-color: #010101;
+			position: absolute;
+			bottom: -1rem;
+			left: 0;
+		}
+
 	}
 
-	&__right {
-		max-width: 257px;
-	}
+	&__right {}
 
 	&__text {
 		font-weight: 700;
@@ -778,11 +840,25 @@ html {
 	&__link {
 		line-height: 32px;
 		opacity: .8;
+		display: flex;
+		gap: 1rem;
+		align-items: center;
+
+		&::before {
+			content: '';
+			display: block;
+			width: 4px;
+			height: 4px;
+			border-radius: 100%;
+			background-color: $black;
+		}
 	}
 
 	&__cost {
 		font-weight: 700;
 		font-size: 4.2rem;
 		line-height: 63px;
+		position: relative;
+		z-index: 1;
 	}
 }
