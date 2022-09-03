@@ -698,11 +698,12 @@ html {
 	}
 }
 
-.backround {}
+
 
 .rates {
 	position: relative;
 	margin-top: 9rem;
+	margin-bottom: 3rem;
 
 	&__header {
 		display: flex;
@@ -862,3 +863,275 @@ html {
 		z-index: 1;
 	}
 }
+
+.aboutTell {
+	margin-top: 18.3rem;
+	position: relative;
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		padding-bottom: 6rem;
+		margin-bottom: 6rem;
+		border-bottom: 1px solid $black;
+		position: relative;
+		z-index: 1;
+	}
+
+	&__title {
+		max-width: 286px;
+		font-size: 2.8rem;
+		font-weight: 700;
+		line-height: 42px;
+		letter-spacing: 0.05rem;
+		text-transform: uppercase;
+
+	}
+
+	&__description {
+		max-width: 560px;
+		font-size: 2.8rem;
+		line-height: 42px;
+	}
+
+	&__box {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 12.8rem;
+	}
+
+	&__social {
+		align-self: end;
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 5.6rem;
+	}
+
+	&__link {
+		position: relative;
+
+		&::after {
+			content: "";
+			display: block;
+			width: 1px;
+			height: 24px;
+			background-color: rgba($black, 0.2);
+			position: absolute;
+			bottom: 1px;
+			right: -29px;
+		}
+
+		&:last-child::after {
+			content: none;
+		}
+	}
+
+	&__vk {
+		color: $black;
+		font-size: 1.6rem;
+		font-weight: 500;
+		line-height: 24px;
+	}
+
+	&__inst {
+		color: $black;
+		font-size: 1.6rem;
+		font-weight: 500;
+		line-height: 24px;
+	}
+
+	&__telegram {
+		color: $black;
+		font-size: 1.6rem;
+		font-weight: 500;
+		line-height: 24px;
+	}
+
+	&__card {
+		align-self: start;
+		flex-basis: 560px;
+		flex-shrink: 1;
+		position: relative;
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+
+	}
+
+	&__label {
+		font-size: 1.2rem;
+		line-height: 18px;
+		margin-bottom: 1rem;
+	}
+
+	&__input {
+		background-color: rgba($black, 0.05);
+		font-size: 1.2rem;
+		line-height: 18px;
+		color: rgba($black, 0.2);
+		width: 100%;
+		padding: 2.4rem 0rem 2.4rem 2rem;
+		margin-bottom: 1.9rem;
+		position: relative;
+
+		&:focus {
+			color: rgba($black, 1);
+		}
+
+		&_opacity {
+
+			&::placeholder {
+				color: rgba($black, 1);
+			}
+		}
+	}
+
+	&__btn {
+		margin-top: 2rem;
+		padding: 2.1rem 0rem 2rem;
+		background-color: $red;
+		font-size: 1.6rem;
+		font-weight: 700;
+		line-height: 24px;
+		color: $white;
+
+		&:hover {
+			cursor: pointer;
+			background-color: #EA0E00;
+		}
+	}
+
+	&__arrow {
+		position: absolute;
+		background: url(../images/aboutTell/aboutTell_Arrow\ .svg)0 0/cover no-repeat;
+		width: 12px;
+		height: 7px;
+		top: 172px;
+		right: 24px;
+	}
+
+	&__circle-300 {
+		position: absolute;
+		top: -29px;
+		left: -2px;
+		width: 300px;
+		height: 300px;
+		border-radius: 100%;
+		background-color: $white;
+		z-index: 0;
+	}
+
+	&__triangle {
+		position: absolute;
+		width: 59px;
+		height: 91px;
+		border: 30px solid transparent;
+		border-bottom: 70px solid $red;
+		top: -6px;
+		left: -23px;
+		z-index: 0;
+	}
+}
+
+
+.footer {
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 1.4rem;
+		padding-top: 6.1rem;
+		margin-bottom: 4rem;
+		border-top: 1px solid $black;
+
+	}
+
+	&__list {
+		width: 48.2rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__item {}
+
+	&__link {
+		color: $black;
+
+		&:hover {
+			color: $red;
+			cursor: pointer;
+		}
+	}
+
+	&__social {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 27rem;
+	}
+
+	&__phone {
+		color: $black;
+
+		&:hover {
+			color: $red;
+			cursor: pointer;
+		}
+	}
+
+	&__mail {
+		color: $black;
+		position: relative;
+
+		&:hover {
+			color: $red;
+			cursor: pointer;
+		}
+
+		&::before {
+			content: '';
+			display: block;
+			width: 1px;
+			height: 25px;
+			background-color: rgba($black, 0.2);
+			position: absolute;
+			bottom: -2px;
+			right: 144px;
+		}
+	}
+
+	&__box {
+		font-size: 1.2rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color: rgba($black, 0.3);
+		line-height: 18px;
+		padding-bottom: 4.2rem;
+	}
+
+	&__author {}
+
+	&__created {}
+
+	&__Annblock {
+		color: rgba($black, 0.3);
+		border-bottom: 1px solid rgba($black, 0.3);
+
+		&:hover {
+			color: rgba($black, 1);
+			border-bottom: 1px solid rgba($black, 1);
+		}
+	}
+}
+
+.container {}
