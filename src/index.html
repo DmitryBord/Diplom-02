@@ -10,25 +10,25 @@
 
 <body>
 	<div class="wrapper">
-		<header class="header">
+		<header id="header" class="header">
 			<div class="container">
 				<div class="header__row">
 					<nav class="header__nav">
 						<ul class="header__list">
 							<li class="header__item">
-								<a href="#" class="header__link">Обо мне</a>
+								<a href="#about" class="header__link">Обо мне</a>
 							</li>
 							<li class="header__item">
-								<a href="#" class="header__link">Портфолио </a>
+								<a href="#portfolio" class="header__link">Портфолио </a>
 							</li>
 							<li class="header__item">
-								<a href="#" class="header__link">Этапы работ</a>
+								<a href="#steps" class="header__link">Этапы работ</a>
 							</li>
 							<li class="header__item">
-								<a href="#" class="header__link">Цены</a>
+								<a href="#rates" class="header__link">Цены</a>
 							</li>
 							<li class="header__item">
-								<a href="#" class="header__link">Обратная связь</a>
+								<a href="#aboutTell" class="header__link">Обратная связь</a>
 							</li>
 						</ul>
 					</nav class="header__nav">
@@ -36,6 +36,7 @@
 						<a href="tel:+79185173602" class="header__phone">8 923 777-77-77</a>
 						<a href="mailto:borodin1236@gmail.com" class="header__mail">alexdev@gmail.com</a>
 					</div>
+					<a href="#menu" class="header__burger"></a>
 				</div>
 			</div>
 		</header>
@@ -48,7 +49,7 @@
 				<h1 class="main__title">web-разработчик</h1>
 				<div class="main__info">
 					<div class="main__box">
-						<button type="button" class="main__btn">Обсудить проект</button>
+						<a href="#popup" class="main__btn">Обсудить проект</a>
 						<ul class="main__social">
 							<li class="main__list">
 								<a href="#" class="main__vk">Vk</a>
@@ -88,7 +89,7 @@
 			<div class="main__triangle">
 			</div>
 		</section>
-		<section class="about">
+		<section id="about" class="about">
 			<div class="container">
 				<div class="about__row">
 					<h2 class="about__title">Обо мне</h2>
@@ -117,7 +118,7 @@
 							алгоритмов работы сайта</d>
 					</div>
 				</div>
-				<div class="about__steps">
+				<div id="steps" class="about__steps">
 					<div class="steps__item">
 						<p class="steps__title steps__title_01 ">Вы заказываете сайт</p>
 						<p class="steps__text">Связываетесь со мной по телефону или через заявку на сайте</p>
@@ -137,7 +138,7 @@
 
 			</div>
 		</section>
-		<div class="portfolio">
+		<div id="portfolio" class="portfolio">
 			<div class="portfolio__title">Портфолио</div>
 			<div class="portfolio__back">
 				<div class="container">
@@ -229,56 +230,94 @@
 							<p class="grid-item__text">Быстро устраню любую проблему на вашем сайте</p>
 						</div>
 					</div>
-
-
 				</div>
 				<div class="adverticement__info">
 					<div class="info-box">
 						<div class="info-box__item">
 							<div class="info-box__logo">
 								<img class="info-box__html5" src="images/advertisement/html5.svg" alt="">
+								<div class="info-box__window">
+									<p class="info-box__title">HTML 5+</p>
+									<p class="info-box__text"> Язык для структурирования и представления содержимого
+										всемирной паутины. Это пятая версия HTML</p>
+								</div>
 							</div>
 						</div>
 						<div class="info-box__item">
 							<div class="info-box__logo">
 								<img class="info-box__css" src="images/advertisement/css.svg" alt="">
+								<div class="info-box__window">
+									<p class="info-box__title">CSS</p>
+									<p class="info-box__text">Формальный язык описания внешнего вида документа,
+										написанного с использованием языка разметки</p>
+								</div>
 							</div>
 						</div>
 						<div class="info-box__item">
 							<div class="info-box__logo">
 								<img class="info-box__js" src="images/advertisement/js.svg" alt="">
+								<div class="info-box__window">
+									<p class="info-box__title">JavaScript ES6+</p>
+									<p class="info-box__text">Язык программирования высокого уровня, использующийся для
+										придания интерактивности веб-страницам</p>
+								</div>
 							</div>
 						</div>
 						<div class="info-box__item">
 							<div class="info-box__logo">
 								<img class="info-box__jquery" src="images/advertisement/jquery.svg" alt="">
+								<div class="info-box__window">
+									<p class="info-box__title">JQuery</p>
+									<p class="info-box__text">Набор функций JavaScript, фокусирующийся на взаимодействии
+										JavaScript и HTML</p>
+								</div>
 							</div>
 						</div>
 						<div class="info-box__item">
 							<div class="info-box__logo">
 								<img class="info-box__bootstrap" src="images/advertisement/bootstrap.svg" alt="">
+								<div class="info-box__window">
+									<p class="info-box__title">Bootstrap</p>
+									<p class="info-box__text">Свободный набор инструментов для создания сайтов и
+										веб-приложений</p>
+								</div>
 							</div>
 						</div>
 						<div class="info-box__item">
 							<div class="info-box__logo">
 								<img class="info-box__php" src="images/advertisement/php 1.svg" alt="">
+								<div class="info-box__window">
+									<p class="info-box__title">PHP</p>
+									<p class="info-box__text">Скриптовый язык общего назначения, интенсивно применяемый
+										для разработки веб-приложений</p>
+								</div>
 							</div>
 						</div>
 						<div class="info-box__item">
 							<div class="info-box__logo">
 								<img class="info-box__vue" src="images/advertisement/vue.svg" alt="">
+								<div class="info-box__window">
+									<p class="info-box__title">Vue.js</p>
+									<p class="info-box__text">JavaScript-фреймворк с открытым исходным кодом для
+										создания пользовательских интерфейсов</p>
+								</div>
 							</div>
 						</div>
 						<div class="info-box__item">
 							<div class="info-box__logo">
 								<img class="info-box__wordpress" src="images/advertisement/Wordpress.svg" alt="">
+								<div class="info-box__window">
+									<p class="info-box__title">WordPress</p>
+									<p class="info-box__text">Свободно распространяемая система управления содержимым
+										сайта с открытым исходным кодом; написана на PHP; сервер базы данных — MySQL</p>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="rates">
+		<div id="rates" class="rates">
 			<div class="container">
 				<div class="rates__header">
 					<h2 class="rates__title">Тарифы</h2>
@@ -291,7 +330,9 @@
 						<div class="rates-item__left">
 							<h3 class="rates-item__title">Разработка лэндинга&nbsp;или&nbsp;сайт&nbsp;визитки</h3>
 							<p class="rates-item__description">Небольшой сайт состоящий из одной страницы</p>
-							<button type="button" class="rates-item__btn">Обсудить проект</button>
+							<button type="button" class="rates-item__btn">
+								<a href="#popup">Обсудить проект</a>
+							</button>
 						</div>
 						<div class="rates-item__right">
 							<p class="rates-item__text">Что входит</p>
@@ -309,7 +350,9 @@
 						<div class="rates-item__left">
 							<h3 class="rates-item__title">Разработка корпоративного&nbsp;сайта</h3>
 							<p class="rates-item__description">Небольшой сайт с n-количеством страниц</p>
-							<button type="button" class="rates-item__btn">Обсудить проект</button>
+							<button type="button" class="rates-item__btn">
+								<a href="#popup">Обсудить проект</a>
+							</button>
 						</div>
 						<div class="rates-item__right">
 							<p class="rates-item__text">Что входит</p>
@@ -327,7 +370,9 @@
 						<div class="rates-item__left">
 							<h3 class="rates-item__title">Разработка интернет&nbsp;-&nbsp;магазина</h3>
 							<p class="rates-item__description">Полноценный каталог вашей продукции</p>
-							<button type="button" class="rates-item__btn">Обсудить проект</button>
+							<button type="button" class="rates-item__btn">
+								<a href="#popup">Обсудить проект</a>
+							</button>
 						</div>
 						<div class="rates-item__right">
 							<p class="rates-item__text">Что входит</p>
@@ -345,7 +390,7 @@
 			<div class="rates__circle-90"></div>
 			<div class="rates__circle-90-90"></div>
 		</div>
-		<div class="aboutTell">
+		<div id="aboutTell" class="aboutTell">
 			<div class="container">
 				<div class="aboutTell__header">
 					<h2 class="aboutTell__title">Расскажите о&nbsp;своем&nbsp;проекте</h2>
@@ -371,12 +416,37 @@
 							<label class="aboutTell__label">Телефон или почта</label>
 							<input type="tel" placeholder="Введите телефон" class="aboutTell__input">
 							<label class="aboutTell__label">Выберите удобный способ связи</label>
-							<input type="text" placeholder="Telegram" class="aboutTell__input aboutTell__input_opacity">
-							<button type="submit" class="aboutTell__btn">Отправить</button>
-							<button type="button" class="aboutTell__arrow"></button>
+
+							<!--Второй варинат-->
+
+							<!--<select class="select" name="color">
+								<option class="option" selected value="red">Telegram</option>
+								<option class="option" value="green">WhatsApp</option>
+								<option class="option" value="yellow">Звонок на
+									телефон</option>
+							</select>-->
+
+							<label class="drop">
+								<input type="checkbox" id="target-drop-example">
+								<span class="control">Выбрать</span>
+								<ul class="drop-items">
+									<li class="item-drop">
+										<a target="_blank" href="https://t.me/DmitryBorodi">Telegram</a>
+									</li>
+									<li class="item-drop">
+										<a target="_blank" href="https://wa.me/79185173602">
+											WhatsApp</a>
+									</li>
+									<li class="item-drop">
+										<a href="tel:+79185173602"> Звонок на
+											телефон</a>
+									</li>
+								</ul>
+								<button type="submit" class="aboutTell__btn">Отправить</button>
+								<label for="target-drop-example" class="overlay-close"></label>
+							</label>
 						</form>
 					</div>
-
 				</div>
 			</div>
 			<div class="aboutTell__circle-300"></div>
@@ -415,6 +485,106 @@
 				</div>
 			</div>
 		</footer>
+		<div id="popup" class="popup">
+			<a href="#header" class="popup__area"></a>
+			<div class="popup__body">
+				<div class="popup__content">
+					<a href="#header" class="popup__close"></a>
+					<div class="popup__header">
+						<div class="popup__title">Расскажите о своем проекте</div>
+						<div class="popup__text">Заполните все поля, и я свяжусь с вами в ближайшее время</div>
+					</div>
+					<form class="aboutTell__form">
+						<label class="aboutTell__label">Телефон или почта</label>
+						<input type="tel" placeholder="Введите телефон" class="aboutTell__input">
+						<label class="aboutTell__label">Выберите удобный способ связи</label>
+
+						<!--Второй варинат-->
+
+						<!--<select class="select" name="color">
+							<option class="option" selected value="red">Telegram</option>
+							<option class="option" value="green">WhatsApp</option>
+							<option class="option" value="yellow">Звонок на
+								телефон</option>
+						</select>-->
+
+						<label class="drop">
+							<input type="checkbox" id="target-drop-example">
+							<span class="control">Выбрать</span>
+							<ul class="drop-items">
+								<li class="item-drop">
+									<a target="_blank" href="https://t.me/DmitryBorodi">Telegram</a>
+								</li>
+								<li class="item-drop">
+									<a target="_blank" href="https://wa.me/79185173602">
+										WhatsApp</a>
+								</li>
+								<li class="item-drop">
+									<a href="tel:+79185173602"> Звонок на
+										телефон</a>
+								</li>
+							</ul>
+							<button type="submit" class="aboutTell__btn">Отправить</button>
+						</label>
+					</form>
+				</div>
+			</div>
+		</div>
+		<dev id="menu" class="menu">
+			<a href="#header" class="menu__area"></a>
+			<div class="menu__body">
+				<div class="menu__burger">
+					<a href="#header" class="menu__close"></a>
+					<div class="menu__box">
+						<ul class="menu__list">
+							<li>
+								<a href="#about" class="menu__link">Обо мне</a>
+							</li>
+							<li>
+								<a href="#portfolio" class="menu__link">Портфолио</a>
+							</li>
+							<li>
+								<a href="#steps" class="menu__link">Этапы работ</a>
+							</li>
+							<li>
+								<a href="#rates" class="menu__link">Цены</a>
+							</li>
+							<li>
+								<a href="#aboutTall" class="menu__link">Обратная связь</a>
+							</li>
+						</ul>
+						<div class="menu__footer">
+							<div class="menu__row">
+								<div class="menu-item">
+									<ul class="menu-item__list">
+										<li>
+											<a href="#" class="menu-item__link">8 923 777-77-77</a>
+										</li>
+										<li>
+											<a href="#" class="menu-item__link">alexdev@gmail.com</a>
+										</li>
+									</ul>
+								</div>
+								<div class="menu-item">
+									<ul class="menu-item__list">
+										<li>
+											<a href="#" class="menu-item__link">Vk</a>
+										</li>
+										<li>
+											<a href="#" class="menu-item__link">Instagram</a>
+										</li>
+										<li>
+											<a href="#" class="menu-item__link">Linkedin</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</dev>
+	</div>
 </body>
 
 </html>

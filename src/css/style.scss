@@ -11,6 +11,13 @@ html {
 	font-size: 10px;
 }
 
+a {
+	transition: .2s;
+	color: $black;
+}
+
+
+
 .wrapper {
 	min-height: 100%;
 	overflow: hidden;
@@ -102,6 +109,13 @@ html {
 			right: 144px;
 		}
 	}
+
+	&__burger {
+		display: none;
+		background: url(../images/burger.svg)0 0/cover no-repeat;
+		width: 26px;
+		height: 20px;
+	}
 }
 
 .container {
@@ -110,7 +124,7 @@ html {
 }
 
 .main {
-	margin: 12.4rem 0px 18.1rem 0px;
+	margin: 12.4rem 0px 6.1rem 0px;
 	position: relative;
 
 	&__image {
@@ -156,26 +170,33 @@ html {
 
 
 	&__btn {
+		color: $black;
+		font-size: 1.6rem;
 		font-weight: 700;
 		line-height: 2.4rem;
 		background-color: transparent;
-		letter-spacing: 0.18rem;
 		padding-bottom: 1rem;
 		display: flex;
 		align-items: center;
-		gap: 1.4rem;
+		gap: 1.6rem;
 		position: relative;
+
+		&::before {
+			content: '';
+			display: block;
+			height: 2px;
+			width: 100%;
+			background-color: $black;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			transform: scale(0);
+			transition: .2s ease-out;
+		}
 
 		&:hover {
 			&::before {
-				content: '';
-				display: block;
-				height: 2px;
-				width: 100%;
-				background-color: $black;
-				position: absolute;
-				bottom: 0;
-				left: 0;
+				transform: scale(1);
 			}
 		}
 
@@ -308,7 +329,8 @@ html {
 
 
 .about {
-	margin-bottom: 18rem;
+	margin-bottom: 5.9rem;
+	padding-top: 12.1rem;
 
 	&__row {
 		display: flex;
@@ -340,13 +362,14 @@ html {
 		grid-template-rows: 1fr 1fr;
 		justify-content: end;
 		gap: 6rem 7rem;
-		border-bottom: 1px solid $black;
+
 		margin-top: 6rem;
-		padding-bottom: 17.9rem;
+		padding-bottom: 2.7rem;
 	}
 
 	&__steps {
 		margin-top: 3rem;
+		padding-top: 12.1rem;
 
 	}
 
@@ -380,6 +403,11 @@ html {
 		margin-bottom: 3rem;
 		padding-bottom: 2.9rem;
 		border-bottom: 1px solid $black;
+
+		&:first-child {
+			padding-top: 3rem;
+			border-top: 1px solid $black;
+		}
 	}
 
 	&__title {
@@ -419,6 +447,7 @@ html {
 
 
 .portfolio {
+	padding-top: 12.1rem;
 	margin-bottom: 18rem;
 	position: relative;
 
@@ -503,13 +532,13 @@ html {
 	border-radius: 100%;
 	background-color: $white;
 	position: absolute;
-	top: -89px;
+	top: 31px;
 	left: 497px;
 	z-index: 0;
 }
 
 .adverticement {
-	padding-bottom: 9rem;
+	padding-bottom: 3.9rem;
 
 	&__description {
 		font-size: 2.8rem;
@@ -605,13 +634,27 @@ html {
 
 	&__logo {
 		text-align: center;
+		position: relative;
+		max-width: 100px;
+		margin: 0 auto;
+		transition: .2s;
 
+		&:hover {
+			.info-box__window {
+				visibility: visible;
+				transform: scale(1);
+			}
+		}
 
+		& img {
+			position: relative;
+			z-index: 0;
+			transition: .2s;
+		}
 	}
 
 	&__html5 {
 		object-fit: cover;
-
 		filter: grayscale(1);
 
 		&:hover {
@@ -622,7 +665,6 @@ html {
 
 	&__css {
 		object-fit: cover;
-
 		filter: grayscale(1);
 
 		&:hover {
@@ -633,7 +675,6 @@ html {
 
 	&__js {
 		object-fit: cover;
-
 		filter: grayscale(1);
 
 		&:hover {
@@ -644,7 +685,6 @@ html {
 
 	&__jquery {
 		object-fit: cover;
-
 		filter: grayscale(1);
 
 		&:hover {
@@ -655,7 +695,6 @@ html {
 
 	&__bootstrap {
 		object-fit: cover;
-
 		filter: grayscale(1);
 
 		&:hover {
@@ -666,7 +705,6 @@ html {
 
 	&__php {
 		object-fit: cover;
-
 		filter: grayscale(1);
 
 		&:hover {
@@ -677,7 +715,6 @@ html {
 
 	&__vue {
 		object-fit: cover;
-
 		filter: grayscale(1);
 
 		&:hover {
@@ -688,7 +725,6 @@ html {
 
 	&__wordpress {
 		object-fit: cover;
-
 		filter: grayscale(1);
 
 		&:hover {
@@ -696,14 +732,56 @@ html {
 			cursor: pointer;
 		}
 	}
+
+	&__window {
+		visibility: hidden;
+		background-color: #E31B1B;
+		width: 232px;
+		padding: 3.5rem 1.5rem 2.7rem;
+		position: absolute;
+		bottom: -150px;
+		left: -65px;
+		z-index: 1;
+		transform: scale(0);
+		transition: .2s ease-out;
+
+
+
+		& p {
+			color: rgba($white, .8);
+			font-size: 1rem;
+			font-weight: 500;
+			line-height: 15px;
+
+			align-items: center;
+		}
+	}
+
+	&__title {
+		margin-bottom: 1rem;
+		position: relative;
+
+
+		&::after {
+			content: '';
+			position: absolute;
+			border: 15px solid transparent;
+			border-bottom: 20px solid #E31B1B;
+			position: absolute;
+			top: -60px;
+			left: 84px;
+		}
+	}
+
+	&__text {}
 }
 
 
 
 .rates {
 	position: relative;
-	margin-top: 9rem;
-	margin-bottom: 3rem;
+	padding-top: 14.1rem;
+	margin-bottom: 6.2rem;
 
 	&__header {
 		display: flex;
@@ -742,7 +820,7 @@ html {
 		border-radius: 100%;
 		background-color: $white;
 		position: absolute;
-		top: -49px;
+		top: 92px;
 		left: 80px;
 		z-index: 0;
 	}
@@ -753,7 +831,7 @@ html {
 		border-radius: 100%;
 		background-color: $white;
 		position: absolute;
-		top: 475px;
+		top: 616px;
 		left: 685px;
 		z-index: 0;
 	}
@@ -796,6 +874,7 @@ html {
 	}
 
 	&__btn {
+		color: $black;
 		font-size: 1.6rem;
 		font-weight: 700;
 		line-height: 24px;
@@ -805,15 +884,7 @@ html {
 		gap: 1.7rem;
 		position: relative;
 
-		&::after {
-			content: '';
-			background: url(../images/main/main-arrow.svg)0 0/cover no-repeat;
-			display: block;
-			width: 15px;
-			height: 11px;
-		}
-
-		&:hover::before {
+		&::before {
 			content: "";
 			display: block;
 			height: 2px;
@@ -822,6 +893,20 @@ html {
 			position: absolute;
 			bottom: -1rem;
 			left: 0;
+			transform: scale(0);
+			transition: .2s ease-out;
+		}
+
+		&:hover::before {
+			transform: scale(1);
+		}
+
+		&::after {
+			content: '';
+			background: url(../images/main/main-arrow.svg)0 0/cover no-repeat;
+			display: block;
+			width: 15px;
+			height: 11px;
 		}
 
 	}
@@ -865,7 +950,7 @@ html {
 }
 
 .aboutTell {
-	margin-top: 18.3rem;
+	padding-top: 12.1rem;
 	position: relative;
 
 	&__header {
@@ -915,6 +1000,19 @@ html {
 	&__link {
 		position: relative;
 
+		& a {
+
+			color: $black;
+			font-size: 1.6rem;
+			font-weight: 500;
+			line-height: 24px;
+
+			&:hover {
+				color: $red;
+				cursor: pointer;
+			}
+		}
+
 		&::after {
 			content: "";
 			display: block;
@@ -931,26 +1029,11 @@ html {
 		}
 	}
 
-	&__vk {
-		color: $black;
-		font-size: 1.6rem;
-		font-weight: 500;
-		line-height: 24px;
-	}
+	&__vk {}
 
-	&__inst {
-		color: $black;
-		font-size: 1.6rem;
-		font-weight: 500;
-		line-height: 24px;
-	}
+	&__inst {}
 
-	&__telegram {
-		color: $black;
-		font-size: 1.6rem;
-		font-weight: 500;
-		line-height: 24px;
-	}
+	&__telegram {}
 
 	&__card {
 		align-self: start;
@@ -993,14 +1076,18 @@ html {
 		}
 	}
 
+
 	&__btn {
-		margin-top: 2rem;
+		margin-top: 3.6rem;
+		width: 100%;
 		padding: 2.1rem 0rem 2rem;
 		background-color: $red;
 		font-size: 1.6rem;
 		font-weight: 700;
 		line-height: 24px;
 		color: $white;
+		position: relative;
+		z-index: 0;
 
 		&:hover {
 			cursor: pointer;
@@ -1019,7 +1106,7 @@ html {
 
 	&__circle-300 {
 		position: absolute;
-		top: -29px;
+		top: 92px;
 		left: -2px;
 		width: 300px;
 		height: 300px;
@@ -1034,11 +1121,139 @@ html {
 		height: 91px;
 		border: 30px solid transparent;
 		border-bottom: 70px solid $red;
-		top: -6px;
+		top: 115px;
 		left: -23px;
 		z-index: 0;
 	}
 }
+
+
+.drop {
+	display: inline-block;
+	position: relative;
+	text-align: center;
+
+	input[type="checkbox"] {
+		display: none;
+
+		&:checked {
+			~.drop-items {
+				opacity: 1;
+				max-height: 400px;
+				padding: .6rem 0;
+			}
+
+			~.control {
+				z-index: 99;
+
+
+
+				&:after {
+					transform: rotate(180deg);
+				}
+			}
+
+			~.overlay-close {
+				transform: none;
+				pointer-events: initial;
+			}
+		}
+	}
+
+	.control {
+		font-size: 1.2rem;
+		text-align: left;
+		width: 100%;
+		color: $black;
+		display: inline-block;
+		cursor: pointer;
+		padding: 2.4rem 0rem 2.3rem 2rem;
+		background: rgba($black, 0.05);
+		transition: all .3s ease;
+
+		&:after {
+			content: "";
+			display: inline-block;
+			height: 7px;
+			width: 12px;
+			position: absolute;
+			top: 31px;
+			right: 24px;
+			margin-left: .8em;
+			background-image: url(../images/aboutTell/aboutTell_Arrow\ .svg);
+			background-repeat: no-repeat;
+			background-position: right;
+			background-size: contain;
+			transition: transform .3s ease;
+		}
+	}
+
+	.drop-items {
+		text-align: left;
+		font-size: 1.2rem;
+		line-height: 18px;
+		position: absolute;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		transition: all .3s ease;
+		background-color: rgba($black, 0.05);
+		overflow: hidden;
+		max-height: 0;
+		opacity: 0;
+		z-index: 99;
+
+		.item-drop {
+			list-style: none;
+			position: relative;
+			z-index: 99;
+
+			a {
+				display: block;
+				color: rgba($black, 0.4);
+				padding: .6rem 2rem;
+				transition: all .3s ease;
+
+				&:hover {
+					color: rgba($black, 1);
+				}
+
+			}
+		}
+	}
+
+	.overlay-close {
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		z-index: 9;
+		transform: translate(100%, 0);
+		pointer-events: none;
+	}
+}
+
+.drop input[type=checkbox]:checked~.aboutTell__btn {
+	visibility: hidden;
+
+}
+
+//Второй вариант
+
+/*
+.select {
+	background-color: rgba($black, 0.05);
+	padding: 2.4rem 0rem 2.3rem 2rem;
+}
+
+.option {
+	background-color: rgba($black, 0.05);
+}
+*/
+
+
+
 
 
 .footer {
@@ -1134,4 +1349,213 @@ html {
 	}
 }
 
-.container {}
+
+.popup {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(black, .8);
+	top: 0;
+	left: 0;
+	z-index: 9;
+	opacity: 0;
+	visibility: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+	transition: .2s;
+
+	&__area {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		cursor: inherit;
+	}
+
+	&__body {
+		min-height: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 30px 10px;
+	}
+
+	&__content {
+		background-color: $grey;
+		flex-basis: 60rem;
+		flex-shrink: 1;
+		margin: 0 auto;
+		padding: 5.5rem 2rem 4rem;
+		position: relative;
+	}
+
+	&__close {
+		background: url(../images/close.svg)0 0/cover no-repeat;
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+
+	&__header {
+		border-bottom: 1px solid $black;
+		margin-bottom: 4rem;
+	}
+
+	&__title {
+		text-align: center;
+		font-size: 2.2rem;
+		font-weight: 700;
+		line-height: 33px;
+		letter-spacing: 0.05rem;
+		margin-bottom: 1.5rem;
+		text-transform: uppercase;
+	}
+
+	&__text {
+		display: block;
+		text-align: center;
+		line-height: 2.4rem;
+		padding-bottom: 3rem;
+	}
+}
+
+.popup:target {
+	opacity: 1;
+	visibility: visible;
+}
+
+
+
+
+.menu {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(black, .8);
+	top: 0;
+	left: 0;
+	z-index: 11;
+	opacity: 0;
+	visibility: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+	transition: .2s;
+
+	&__area {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		cursor: inherit;
+	}
+
+	&__body {
+		min-height: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 30px 10px;
+	}
+
+	&__burger {
+		background-color: $grey;
+		flex-basis: 60rem;
+		flex-shrink: 1;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	&__close {
+		background: url(../images/close.svg)0 0/cover no-repeat;
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+
+	&__box {
+		padding: 8rem 1rem 4.1rem;
+		text-align: center;
+	}
+
+	&__list {
+
+		& li {
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+			border-top: 1px solid rgba($black, 0.2);
+
+			&:last-child {
+				border-bottom: 1px solid rgba($black, 0.2);
+			}
+
+			& a:hover {
+				color: $red;
+				transition: .2s;
+			}
+		}
+
+
+	}
+
+	&__link {
+		font-size: 2.6rem;
+		line-height: 39px;
+
+	}
+
+	&__footer {
+		margin-top: 4rem;
+	}
+
+	&__row {}
+}
+
+.menu-item {
+	&:first-child {
+		margin-bottom: 2rem;
+	}
+
+	&__list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
+
+		& li {
+			position: relative;
+
+			&::after {
+				content: '';
+				display: block;
+				width: 1px;
+				height: 24px;
+				background-color: rgba($black, 0.2);
+				position: absolute;
+				bottom: 0;
+				right: -13px;
+			}
+
+			&:last-child::after {
+				content: none;
+			}
+		}
+	}
+
+	&__link {
+		&:hover {
+			color: $red;
+			transition: .2s;
+		}
+	}
+}
+
+.menu:target {
+	opacity: 1;
+	visibility: visible;
+}
