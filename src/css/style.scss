@@ -2124,6 +2124,7 @@ a {
 	overflow-y: auto;
 	overflow-x: hidden;
 	transition: .2s;
+	z-index: 100;
 
 	&__area {
 		position: absolute;
